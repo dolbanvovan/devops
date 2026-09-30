@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat App with Metrics</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; }
+        img { max-width: 400px; border-radius: 8px; }
+        .box { margin: 20px auto; max-width: 500px; padding: 15px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Случайный котик</h1>
+    {% if url %}
+        <img src="{{ url }}" alt="Cat">
+    {% else %}
+        <p>Список картинок пуст!</p>
+    {% endif %}
+
+    <!-- Секция редактирования данных -->
+    <div class="box">
+        <h3>Добавить свою картинку (Редактируемость)</h3>
+        <form action="/add" method="POST">
+            <input type="url" name="url" placeholder="Ссылка на GIF/JPG" required style="width: 70%;">
+            <button type="submit">Добавить</button>
+        </form>
+
+        <h4>Текущие картинки в базе:</h4>
+        <ul style="text-align: left;">
+            {% for img in images %}
+                <li>
+                    {{ img[:40] }}...
+                    <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
+                        <button type="submit">❌</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
