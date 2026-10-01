@@ -8,7 +8,7 @@ Docker Compose: https://github.com/dolbanvovan/devops/blob/main/docker-compose.y
 
 CI/CD Workflow: https://github.com/dolbanvovan/devops/blob/main/.github/workflows/deploy.yml
 
-Docker Hub образ: https://hub.docker.com/r/dolbanvovan/cat-app
+Docker Hub образ: https://hub.docker.com/r/loshok1311/cat-app
 
 Работающие сервисы на VPS (158.160.153.23):
 
