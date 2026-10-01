@@ -20,5 +20,7 @@ Health check: http://158.160.153.23:5000/health
 
 Prometheus UI: [http://158.160.153.23:9090](http://158.160.153.23:9090/graph?g0.expr=increase(http_requests_total%5B1h%5D)&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1h)
 http://158.160.153.23:9090/graph?g0.expr=container_network_receive_bytes_total&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1h
+http://158.160.153.23:9090/graph?g0.expr=rate(process_cpu_seconds_total%5B1m%5D)&g0.tab=0&g0.stacked=1&g0.show_exemplars=0&g0.range_input=1h
+http://158.160.153.23:9090/graph?g0.expr=container_memory_usage_bytes%7Bid%3D%22%2F%22%7D&g0.tab=0&g0.stacked=1&g0.show_exemplars=0&g0.range_input=1h
 
 cAdvisor UI: http://158.160.153.23:8080
