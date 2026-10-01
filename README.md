@@ -20,6 +20,4 @@ Health check: http://158.160.153.23:5000/health
 
 Prometheus UI: http://158.160.153.23:9090
 
-Grafana UI: http://158.160.153.23:3000 (admin / admin)
-
 cAdvisor UI: http://158.160.153.23:8080
